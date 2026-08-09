@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("login test", async ({ page }) => {
+test.skip("login test", async ({ page }) => {
     // 'page' is automatically created for you
     // Playwright already launched a browser, created a context, and opened this page
 

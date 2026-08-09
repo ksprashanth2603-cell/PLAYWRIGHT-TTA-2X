@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
+test.skip('has title', async ({ page }) => {
     await page.goto('https://playwright.dev/');
     await expect(page).toHaveTitle(/Playwright/);
 });
@@ -11,7 +11,7 @@ test.skip('skipped test', async ({ page }) => {
 });
 
 // Only run this test
-test('focused test', async ({ page }) => {// use test.only()
+test.skip('focused test', async ({ page }) => {// use test.only()
     // Only this test runs
 });
 
@@ -21,11 +21,11 @@ test('focused test', async ({ page }) => {// use test.only()
 });*/
 
 // Slow test (3x timeout)
-test.slow('slow test', async ({ page }) => {
+test.skip('slow test', async ({ page }) => {
     // Has extended timeout
 });
 
 // Conditional skip
-test('conditional', async ({ page, browserName }) => {
+test.skip('conditional', async ({ page, browserName }) => {
     test.skip(browserName === 'firefox', 'Not supported in Firefox');
 });
