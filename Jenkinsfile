@@ -11,17 +11,17 @@ pipeline {
     }
     stage('Install dependencies') {
       steps {
-        sh 'npm ci'
+        bat 'npm ci'
       }
     }
     stage('Install Playwright browsers') {
       steps {
-        sh 'npx playwright install --with-deps'
+        bat 'npx playwright install --with-deps'
       }
     }
     stage('Run tests') {
       steps {
-        sh 'npx playwright test --reporter=list'
+        bat 'npx playwright test --reporter=list'
       }
     }
     stage('Archive artifacts') {
