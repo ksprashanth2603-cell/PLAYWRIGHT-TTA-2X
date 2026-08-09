@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Run tests') {
       steps {
-        bat 'npx playwright test --reporter=list'
+        bat 'npx playwright test'
       }
     }
     stage('Archive artifacts') {
@@ -32,7 +32,14 @@ pipeline {
   }
   post {
     always {
-      junit allowEmptyResults: true, testResults: 'playwright-report/**/results-*.xml'
+      publishHTML(target: [
+        allowMissing: true,
+        alwaysLinkToLastBuild: true,
+        keepAll: true,
+        reportDir: 'playwright-report',
+        reportFiles: 'index.html',
+        reportName: 'Playwright Report'
+      ])
     }
   }
 }
