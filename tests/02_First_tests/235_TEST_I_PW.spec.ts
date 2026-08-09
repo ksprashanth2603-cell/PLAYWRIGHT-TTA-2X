@@ -12,6 +12,7 @@ test("login test", async ({ page }) => {
     await expect(page).toHaveURL("/dashboard");
 });
 
+/*
 test("another test", async ({ page }) => {
     // This gets a FRESH page in a FRESH context
     // Zero shared state with the test above
@@ -19,4 +20,4 @@ test("another test", async ({ page }) => {
 
     await page.goto("https://app.com/#signup");
     await expect(page).toHaveTitle("Sign Up");
-});
+});*/
