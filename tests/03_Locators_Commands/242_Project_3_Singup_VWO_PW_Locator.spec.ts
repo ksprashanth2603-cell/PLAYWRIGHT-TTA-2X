@@ -9,9 +9,9 @@ test('Verify the sign up error with invalid email with PW locator', async ({ pag
     await page.getByRole('button', { name: 'Create a Free Trial Account' }).click();
 
     let error_msg = await page.getByText("The email address you entered is incorrect.").textContent();
-    expect(error_msg).toContain("The email address you entered is incorrect.");
-    //let error_msg = await page.getByText("The email address you entered is incorrect.").textContent();
     //expect(error_msg).toContain("The email address you entered is incorrect.");
+    //let error_msg = await page.getByText("The email address you entered is incorrect.").textContent();
+    expect(error_msg).toContain("The email address you entered is incorrect.");
     }
     
     );
