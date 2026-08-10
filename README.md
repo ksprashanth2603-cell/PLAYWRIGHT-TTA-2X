@@ -1,14 +1,15 @@
 # PLAYWRIGHT-TTA-2X
 
-Playwright end-to-end test automation sample project.
+A sample Playwright end-to-end automation project built for the Playwright TTA 2x course.
 
 ## Project Contents
 
 - `package.json` - npm dependencies and scripts
 - `package-lock.json` - npm lockfile
 - `playwright.config.ts` - Playwright configuration
-- `tests/example.spec.ts` - sample Playwright test
-- `.github/` - GitHub workflows or repository metadata
+- `tests/` - Playwright test suites and template files
+- `.github/` - GitHub workflows and repository metadata
+- `Jenkinsfile` - Jenkins pipeline for running tests
 
 ## Setup
 
@@ -16,12 +17,35 @@ Playwright end-to-end test automation sample project.
    ```bash
    npm install
    ```
-2. Run tests:
+2. Install Playwright browsers:
    ```bash
-   npx playwright test
+   npx playwright install
    ```
+
+## Run tests
+
+- Run all tests:
+  ```bash
+  npx playwright test
+  ```
+- Run a single spec in headed mode:
+  ```bash
+  npx playwright test tests/03_Locators_Commands/246_PressSeq.spec.ts --headed
+  ```
+- Run tests with one worker to reduce browser overlap:
+  ```bash
+  npx playwright test --workers=1 --headed
+  ```
+
+## Project Structure
+
+- `tests/01_Basics/` - basic Playwright assertions and annotations
+- `tests/02_First_tests/` - browser-context-page examples
+- `tests/03_Locators_Commands/` - locator and command practice
+- `tests/19_Advance_Framework/` - advanced framework scaffolding
 
 ## Notes
 
 - `node_modules/` is excluded from source control.
-- A `node_modules/.gitignore` file is included so the folder remains ignored if created locally.
+- Use `npm install` to install dependencies, not `npm ci` if you want to keep local changes to package-lock updates.
+- The repository includes a `Jenkinsfile` for CI automation.
