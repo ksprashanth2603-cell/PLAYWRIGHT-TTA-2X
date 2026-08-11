@@ -1,3 +1,40 @@
+# PLAYWRIGHT TTA 2X
+
+A small Playwright project using a custom TTA HTML reporter.
+
+## Quick Start
+
+- Install dependencies:
+
+```bash
+npm install
+```
+
+- Run a single test (headed):
+
+```bash
+npx playwright test tests/02_First_tests/231_First_Running_Verify.spec.ts --headed
+```
+
+- Open the latest Custom TTA report (Windows PowerShell):
+
+```powershell
+Get-ChildItem -Path 'tta-report' -Filter 'report_*.html' | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | ForEach-Object { Start-Process $_.FullName }
+```
+
+Or (Git Bash):
+
+```bash
+latest=$(ls -t "tta-report"/report_*.html | head -n1); cmd.exe /C start "" "$latest"
+```
+
+## Notes
+- Custom reporter: `utils/CustomReporter.ts` — generates `tta-report/report_<timestamp>.html` and attempts to open it after the run.
+- Allure: `allure-playwright` is present but `allure-commandline` requires Java to run `allure serve`.
+- Consider adding `tta-report/` to `.gitignore` to avoid committing large artifacts.
+
+## Contact
+Maintainer: Prashanth
 # PLAYWRIGHT-TTA-2X
 
 A sample Playwright end-to-end automation project built for the Playwright TTA 2x course.
