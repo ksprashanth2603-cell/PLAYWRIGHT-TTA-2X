@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "allure:serve": "npx allure serve allure-results"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.62.1",
-    "@types/node": "^26.1.2"
+    "@types/node": "^26.1.2",
+    "allure-playwright": "^3.10.2",
+    "allure-commandline": "^2.22.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   }
 }
