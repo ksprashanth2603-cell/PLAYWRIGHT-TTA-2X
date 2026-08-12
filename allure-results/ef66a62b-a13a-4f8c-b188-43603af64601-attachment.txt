@@ -1,0 +1,1 @@
+Open VWO dashboard using saved session — storageState applied, no login form hit

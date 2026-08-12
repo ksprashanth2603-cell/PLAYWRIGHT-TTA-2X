@@ -826,7 +826,7 @@ class CustomTTAReporter implements Reporter {
             const testGroup = test.tags.find(t => t.includes('P0') || t.includes('P1') || t.includes('P2')) ||
                 test.describePath[0] || 'E2E';
 
-            const author = process.env.TEST_AUTHOR || 'TTA-QA';
+            const author = process.env.TEST_AUTHOR || 'Prashanth';
 
             const testStartTime = new Date(this.startTime.getTime());
             const testEndTime = new Date(testStartTime.getTime() + test.duration);
