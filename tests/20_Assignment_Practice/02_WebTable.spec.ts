@@ -14,5 +14,6 @@ await page.waitForTimeout(3000);
     .locator('.bi-trash')
     .click();
     await page.waitForTimeout(3000);
+    //Easisest way to verify the table data
 }
 );
