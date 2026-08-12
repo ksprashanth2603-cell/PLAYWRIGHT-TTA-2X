@@ -92,7 +92,7 @@ class CustomTTAReporter implements Reporter {
         const totalTests = suite.allTests().length;
 
         console.log('\n╔════════════════════════════════════════════════════════════════╗');
-        console.log('║        🎭 TTA PLAYWRIGHT AUTOMATION - REAL-TIME REPORT         ║');
+        console.log('║        🎭 CUSTOM PLAYWRIGHT AUTOMATION - REAL-TIME REPORT         ║');
         console.log('╠════════════════════════════════════════════════════════════════╣');
         console.log(`║  📅 Started: ${this.startTime.toLocaleString().padEnd(47)}║`);
         console.log(`║  📊 Total Tests: ${String(totalTests).padEnd(44)}║`);
@@ -634,7 +634,7 @@ class CustomTTAReporter implements Reporter {
     </style>
 </head>
 <body>
-    <div class="header"><h1>📊 TTA Report History</h1><p>The Testing Academy - Playwright Framework</p></div>
+    <div class="header"><h1>📊 TTA Report History</h1><p>Custom Report - Playwright Framework</p></div>
     <div class="report-list">
         ${files.map((f, i) => {
             const match = f.match(/report_(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})\.html/);
@@ -667,8 +667,8 @@ class CustomTTAReporter implements Reporter {
 </head>
 <body>
     <div class="header">
-        <h1>🎭 TTA Automation Report</h1>
-        <p class="header-subtitle">The Testing Academy - Playwright Framework</p>
+        <h1>🎭 Custom Automation Report</h1>
+        <p class="header-subtitle">Playwright Framework</p>
     </div>
 
     <div class="container">
@@ -685,7 +685,7 @@ class CustomTTAReporter implements Reporter {
     </div>
 
     <footer class="report-footer">
-        <p>Built with ❤️ by <a href="https://thetestingacademy.com" target="_blank">Pramod Dutta</a> | <a href="https://thetestingacademy.com" target="_blank">The Testing Academy</a></p>
+        <p>Built by Prashanth </p>
     </footer>
 
     <script>
@@ -1319,7 +1319,8 @@ class CustomTTAReporter implements Reporter {
             background: white;
             border-radius: var(--radius);
             box-shadow: var(--shadow-lg);
-            overflow: hidden;
+            overflow: auto; /* allow horizontal scroll when table is wider than viewport */
+            max-width: 100%;
         }
         .test-table {
             width: 100%;
@@ -1335,14 +1336,15 @@ class CustomTTAReporter implements Reporter {
             z-index: 10;
         }
         .test-table th {
-            padding: 16px 12px;
+            padding: 12px 10px;
             text-align: left;
             font-weight: 600;
-            font-size: 11px;
+            font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.4px;
             border: none;
-            white-space: nowrap;
+            white-space: normal; /* allow header text to wrap to multiple lines */
+            word-break: keep-all;
         }
         .test-table td {
             padding: 14px 12px;
@@ -1374,14 +1376,14 @@ class CustomTTAReporter implements Reporter {
         /* Column widths */
         .col-sno { width: 50px; text-align: center; font-weight: 600; color: var(--gray-400); }
         .col-suite { min-width: 120px; }
-        .col-testname { min-width: 280px; }
+        .col-testname { min-width: 220px; }
         .col-author { width: 80px; }
         .col-group { width: 80px; }
-        .col-tags { min-width: 120px; }
-        .col-file { min-width: 140px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gray-500); }
-        .col-starttime, .col-endtime { width: 160px; font-size: 12px; color: var(--gray-500); }
-        .col-duration { width: 80px; text-align: center; font-weight: 600; }
-        .col-status { width: 100px; text-align: center; }
+        .col-tags { min-width: 100px; }
+        .col-file { min-width: 200px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gray-500); white-space: normal; word-break: break-all; }
+        .col-starttime, .col-endtime { width: 120px; font-size: 12px; color: var(--gray-500); }
+        .col-duration { width: 70px; text-align: center; font-weight: 600; }
+        .col-status { width: 90px; text-align: center; }
         .col-screenshot, .col-video, .col-trace { width: 80px; text-align: center; }
 
         .test-name-link {
