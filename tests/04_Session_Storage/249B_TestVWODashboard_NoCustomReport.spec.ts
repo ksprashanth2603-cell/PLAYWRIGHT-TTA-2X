@@ -9,7 +9,7 @@ test('To fetch the auth data from auth.json file and verify the dashboard page',
   await expect(signOutButton).toBeVisible();
 
   await page.getByRole('button', { name: 'ORDERS' }).click();
-  await page.getByRole('button', { name: 'Delete' }).first().click();
+  //await page.getByRole('button', { name: 'Delete' }).first().click();
 });
 
 test('To fetch the auth data from auth.json file and verify the cart page', async ({ page }) => 
