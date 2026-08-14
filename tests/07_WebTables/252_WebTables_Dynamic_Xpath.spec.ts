@@ -8,6 +8,11 @@ test('Verify how to handle webtables using XPath', async({page}) =>
 {
 await page.goto('https://awesomeqa.com/webtable.html');
 
+//const row = await page.locator('#customers td:right-of(td:text("Helen Bennett"))').nth(0).innerText(); This also works
+const row = await page.locator('#customers').locator('td:right-of(td:text("Helen Bennett"))').nth(0).innerText();
+console.log('Helen Bennett is from ',row);
+  
+/*
 ////table[@id="customers"]/tbody/tr[5]/td[2]
 
 const firstPart = '//table[@id="customers"]/tbody/tr[';
@@ -41,6 +46,8 @@ for (let i=2; i<=allRows; i++)
 
     }
  } 
+
+ */ //This also works
 }
 );
 

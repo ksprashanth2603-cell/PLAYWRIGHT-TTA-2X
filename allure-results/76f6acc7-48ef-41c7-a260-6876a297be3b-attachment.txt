@@ -1,0 +1,37 @@
+
+          
+            The Testing Academy
+            
+              A public practice page from The Testing Academy for learning multiple element filtering,
+              link collection, footer-link traversal, and targeted clicks.
+            
+          
+          
+            Information
+            About Us
+            Delivery Information
+            Privacy Policy
+            Terms & Conditions
+          
+          
+            Customer Service
+            Contact Us
+            Returns
+            Site Map
+            Brands
+          
+          
+            Extras
+            Gift Certificates
+            Affiliate
+            Specials
+            Support Center
+          
+          
+            My Account
+            My Account
+            Order History
+            Wish List
+            Newsletter
+          
+        

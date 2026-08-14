@@ -1,0 +1,1 @@
+locator('#customers').locator('td:right-of(:text("Helen Bennett"))')

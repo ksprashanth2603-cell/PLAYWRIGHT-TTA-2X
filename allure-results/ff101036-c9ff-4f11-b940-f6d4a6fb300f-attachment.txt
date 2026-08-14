@@ -1,0 +1,9 @@
+[
+  'Company\tContact\tCountry\n' +
+    'Google\tMaria Anders\tGermany\n' +
+    'Meta\tFrancisco Chang\tMexico\n' +
+    'Microsoft\tRoland Mendel\tAustria\n' +
+    'Island Trading\tHelen Bennett\tUK\n' +
+    'Adobe\tYoshi Tannamuri\tCanada\n' +
+    'Amazon\tGiovanni Rovelli\tItaly'
+]

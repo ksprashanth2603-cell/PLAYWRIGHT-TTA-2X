@@ -10,9 +10,11 @@ await expect(page).toHaveURL(/viewEmployeeList/);
 await page.waitForTimeout(3000);
 
  await page.locator('.oxd-table-card')
-    .filter({ hasText: 'Terminated' })
-    .locator('.bi-trash')
-    .click();
+ .filter({ hasText: 'Terminated' })
+ .locator('.bi-trash')
+ .click();
+
+
     await page.waitForTimeout(3000);
     //Easisest way to verify the table data
 }

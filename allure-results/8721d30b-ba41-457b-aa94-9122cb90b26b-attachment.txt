@@ -1,0 +1,1 @@
+[ 'Taipei 101\tTaiwan\tTaipei\t509m\t2004\t3\t\n' ]
