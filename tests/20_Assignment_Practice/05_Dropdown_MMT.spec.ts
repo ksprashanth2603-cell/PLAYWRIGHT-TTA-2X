@@ -18,6 +18,9 @@ await page.getByText('Bengaluru, India').click();
 //await page.pause();
 
 await page.keyboard.press('Escape');
+
+
+
 }
 );
 
