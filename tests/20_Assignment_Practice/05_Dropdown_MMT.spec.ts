@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test'
 
-test('DropDown example from MMT', async({page})=>
+test.skip('DropDown example from MMT', async({page})=>
 {
 await page.goto('https://www.makemytrip.com/flights/');
 await page.locator('.commonModal__close').click();

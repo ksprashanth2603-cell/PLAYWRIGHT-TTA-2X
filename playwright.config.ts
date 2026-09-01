@@ -15,7 +15,7 @@ export default defineConfig({
   testDir: './tests',
   testMatch: ['tests/**/*.spec.ts'],
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -41,7 +41,7 @@ export default defineConfig({
     screenshot: 'on',
     video: 'on',
     viewport: { width: 1920, height: 1080 },
-    launchOptions:{args: ['--disable-http2'] },
+    
 
   },
 
@@ -51,7 +51,7 @@ export default defineConfig({
    {
       name: 'chromium',
     use: { ...devices['Desktop Chrome'] ,
-      
+
     },
    
     },

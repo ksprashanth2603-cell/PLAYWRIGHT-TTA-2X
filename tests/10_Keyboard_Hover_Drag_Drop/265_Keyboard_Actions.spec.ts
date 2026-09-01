@@ -20,6 +20,5 @@ test('Keybaord', async ({ page }) => {
     await page.keyboard.up("Shift");
     await page.keyboard.down("Shift");
     
-
 }
 );
